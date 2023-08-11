@@ -1,0 +1,5 @@
+--*** ex 3
+הצג מטבלת Employees את העמודות הבאות : FirstName , HireDate , Region , Count
+
+--select FirstName, HireDate, Region, Country
+--from Employees
