@@ -1,16 +1,29 @@
 --*** ex 3
+הצג מטבלת Employees את העמודות הבאות : FirstName , HireDate , Region , Count
+
 --select FirstName, HireDate, Region, Country
 --from Employees
 
 --*** ex 6
+ הצג מטבלת Employees את העמודות הבאות : Address( אליאס - Add ), City( אליאס - Ct ), Region
+)אליאס - reg) 
+
 --select Address as [add], City ct, Region as reg
 --from Employees
 
 --*** ex 7
+הצג מטבלת customers שתי עמודות: קוד הלקוח בעמודה אחת, הכתובת והעיר משורשרות יחדיו בעמודה
+שנייה. יש לתת את השם "address full "לעמודה השנייה.
+
 --select CustomerID, Address +' '+ City [full addres]
 --from Custome
 
 --*** ex 8
+הצג מטבלת Employees שלוש עמודות:
+השמות המלאים של העובדים )שם פרטי משורשר עם שם משפחה( תחת הכותרת Name Full,
+את תאריך יום ההולדת שלהם פלוס 8 ימים תחת הכותרת Date Birth,
+ואת קוד המנהל )עמודת ReportsTo )תחת הכותרת #Manager.
+
 --select FirstName+' '+LastName as 'full name',
 --        BirthDate+8 [birth date], ReportsTo as Manager#
 --from Employees
@@ -20,16 +33,40 @@
 --from Employees
 
 ----*** ex 12 a
+ הצג מטבלת Customers את המדינה )Country )ואת העיר (City(
+
 --select City, Country
 --from Customers
 
 ----*** ex 12 b
+ הצג מטבלת Customers את השילוב הייחודי של המדינה והעיר
+
 --select distinct City, Country
 --from Customers
 
 ----*** ex 15
+הצג מטבלת המוצרים את העמודות הבאות:
+קוד מוצר
+שם מוצר
+מחיר ליחידה
+מחיר לאחר העלאה של 16.5% )יש לתת לעמודה כינוי מתאים(
+מספר מוצרים במלאי
+מספר מוצרים מוזמנים.
+ההפרש בין מספר המוצרים במלאי למספר המוצרים המוזמנים
+
 --select ProductID, ProductName, 
 --       UnitPrice,UnitPrice * 0.165 + UnitPrice as newPrice,
 --       UnitsInStock, UnitsOnOrder,
 --	   UnitsInStock - UnitsOnOrder as 'sum'
+--from Produc
+
+----*** ex 16
+יש להציג מטבלת products את העמודות הבאות:
+מספר המוצר,
+שם מוצר,
+ועלות המוצרים במלאי שלא הוזמנו )כלומר חישוב ההפרש בין מספר המוצרים במלאי
+ ומספר המוצרים שהוזמנו כפול מחיר ליחידה(. יש לתת שם מתאים לעמודה.
+
+--select ProductID, ProductName
+--      ,(UnitsInStock - UnitsOnOrder) * UnitPrice as total 
 --from Produc
