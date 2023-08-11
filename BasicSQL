@@ -1,0 +1,21 @@
+--*** ex 3
+--select FirstName, HireDate, Region, Country
+--from Employees
+
+--*** ex 6
+--select Address as [add], City ct, Region as reg
+--from Employees
+
+--*** ex 8
+--select FirstName+' '+LastName as 'full name',
+--        BirthDate+8 [birth date], ReportsTo as Manager#
+--from Employees
+
+----*** ex 12 a
+--select City, Country
+--from Customers
+
+
+----*** ex 12 b
+--select distinct City, Country
+--from Customers
