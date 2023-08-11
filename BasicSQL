@@ -26,3 +26,10 @@
 ----*** ex 12 b
 --select distinct City, Country
 --from Customers
+
+----*** ex 15
+--select ProductID, ProductName, 
+--       UnitPrice,UnitPrice * 0.165 + UnitPrice as newPrice,
+--       UnitsInStock, UnitsOnOrder,
+--	   UnitsInStock - UnitsOnOrder as 'sum'
+--from Produc
