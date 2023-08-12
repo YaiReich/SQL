@@ -1,3 +1,23 @@
+--select *
+--from students
+/*
+select id, address
+from students
+*/
+
+--select address as ktovet, name  [first Name], id as 'tehudat zeut'
+--from students
+
+--select name+' '+address fullData,id*2+1
+--from students
+
+--select distinct address
+--from students
+
+--select distinct name, address
+--from students
+--------------------------------------------------------------------------
+
 --*** ex 3
 הצג מטבלת Employees את העמודות הבאות : FirstName , HireDate , Region , Count
 
