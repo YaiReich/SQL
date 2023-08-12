@@ -1,0 +1,103 @@
+--select *
+--from students
+--where id<5
+
+--select *
+--from students
+--where name='ron'
+
+--select *
+--from students
+--where id between 2 and 4
+
+--select *
+--from students
+--where id in(1,2,5)
+
+
+--select *
+--from students
+--where not id between 2 and 4
+
+--select *
+--from students
+--where not id in(1,2,5)
+
+--select *
+--from students
+--where address like '%a'
+
+--select *
+--from students
+--where address like 'n%'
+
+--select *
+--from students
+--where address like '%a%'
+
+
+--select *
+--from students
+--where address like '__t%'
+
+
+--select *
+--from students
+--where address like '[a-dm]%'
+
+
+--select *
+--from students
+--where address is null
+
+--select *
+--from students
+--where  address is not null
+
+--select *
+--from students
+--where address is not null or id>5
+
+--select id,name, address
+--from students
+--order by name
+
+
+--select id,name, address
+--from students
+--order by name asc
+
+
+--select id,name, address
+--from students
+--order by name desc
+
+
+--select id,name, address
+--from students
+--order by address,name desc
+
+
+--select id,name, address
+--from students
+--where id<>3
+--order by address,name desc
+
+
+--select id,name, address
+--from students
+--order by 3 desc, 2 asc
+
+
+--select id as tz,name fname, address ktovet
+--from students
+--where id>3
+--order by ktovet
+
+
+--select top 3 id,name, address
+--from students
+
+select top 2 *
+from Products
+order by UnitPrice desc
