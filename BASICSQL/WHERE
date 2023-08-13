@@ -164,3 +164,23 @@ order by UnitPrice desc
 --select EmployeeID, FirstName+' '+LastName fullName,BirthDate, Country
 --from Employees
 --where LastName like '%[dk]%' or YEAR(BirthDate)=1963
+
+--*** ex 22 -
+select ProductName, UnitPrice, SupplierID
+from Products
+where UnitPrice > 30
+and SupplierID in (1,3)
+
+--*** ex 23 -
+select OrderID, EmployeeID, OrderDate, RequiredDate, ShipName
+from Orders
+where EmployeeID = 7
+and ShipName  in ('QUICK-Stop' , 'Du monde entier', 'Eastern Connection')
+and (RequiredDate - OrderDate) > 20
+
+--*** ex 24 -
+select ProductID, ProductName
+from Products
+where (SupplierID in (8,16,21) or UnitPrice < 10)
+       and UnitsInStock not between 10 and 100
+order by UnitPrice asc
