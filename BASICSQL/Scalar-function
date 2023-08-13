@@ -7,3 +7,30 @@
 
 --select LEFT(ProductName,3), ProductName, SUBSTRING(ProductName,2,3)
 --from Products
+
+--select GETDATE(),YEAR(GETDATE()),MONTH(GETDATE()),DAY(getdate())
+
+--select DATEADD(yy,4,getdate())
+
+--select DATEDIFF(yy,hiredate,getdate()),HireDate
+--from Employees
+
+--select DATENAME(dw,getdate())
+--select DATENAME(mm,getdate())
+
+--select FirstName+' '+cast(HireDate as nvarchar(30))
+--from Employees
+
+--select FirstName+' '+CONVERT(nvarchar(30),hiredate,113)
+--from Employees
+
+--select FirstName+' '+FORMAT(hiredate,'dd-MMM/yyyy')
+--from Employees
+
+--select id,name,isnull(address,'sham')
+--from students
+----where address is null
+
+--select count(*)
+--from students
+--where address like '%a%'
