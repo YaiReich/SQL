@@ -1,0 +1,7 @@
+create proc sp1(@id int)
+as 
+select name
+from students
+where id=@id
+
+exec sp1 2
