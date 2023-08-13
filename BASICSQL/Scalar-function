@@ -59,3 +59,21 @@ from Employees
 
 select FirstName, datename(dw,HireDate) ,year(HireDate)
 from Employees
+
+--*** ex 13 - opt1
+
+SELECT cast(ProductID as nvarchar)+' AND '+ CAST(SupplierID as nvarchar) AS Product,
+Floor(UnitPrice*1.165) as ['Full price']
+FROM Products
+where Floor(UnitPrice*1.165) > 40
+
+--*** ex 13 - opt2
+SELECT CONCAT(ProductID, ' AND ', SupplierID) AS Product,
+Floor(UnitPrice*1.165) as ['Full price']
+FROM Products
+where Floor(UnitPrice*1.165) > 40
+
+--*** ex 17
+SELECT LEFT(CompanyName, 4) AS FirstFourLetters
+FROM Customers
+WHERE CompanyName LIKE 'a%'
