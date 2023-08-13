@@ -77,3 +77,10 @@ where Floor(UnitPrice*1.165) > 40
 SELECT LEFT(CompanyName, 4) AS FirstFourLetters
 FROM Customers
 WHERE CompanyName LIKE 'a%'
+
+--*** ex 18
+select LastName +' '+ CAST(BirthDate as nvarchar),
+       CONVERT(nvarchar, HireDate,104),
+       ISNULL(cast(ReportsTo as nvarchar), 'No Manager') 
+from Employees
+where LEN(LastName) >= LEN(FirstName)
