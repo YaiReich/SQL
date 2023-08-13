@@ -1,3 +1,9 @@
 --select UnitPrice, CEILING(unitprice) up, FLOOR(UnitPrice) down,
 --       ROUND(UnitPrice,0), ROUND(UnitPrice,1)
 --from Products
+
+--select CHARINDEX('la','blablabla')
+--select CHARINDEX('la','blablabla',3)
+
+--select LEFT(ProductName,3), ProductName, SUBSTRING(ProductName,2,3)
+--from Products
