@@ -34,3 +34,15 @@
 --select count(*)
 --from students
 --where address like '%a%'
+
+--*** ex 1
+ select LOWER(firstNAme), UPPER(LastName) 
+ from Employees
+ where EmployeeID between 3 and 5
+
+--*** ex 5
+ select ProductID, ProductName,replace(ProductName,'?','-')
+ from Products
+
+--*** ex 6 - הצג את התאריך של היום.
+ select GETDATE()
