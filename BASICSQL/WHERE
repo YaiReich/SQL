@@ -113,3 +113,14 @@ order by UnitPrice desc
 --from Products
 --where UnitPrice > 20
 --order by UnitPrice
+
+--*** ex 5
+ --select EmployeeID id, LastName +' '+ FirstName as 'full Name', BirthDate, City
+ --from Employees
+ --where City = 'London'
+
+--*** ex 6
+ select * 
+ from Products
+ where UnitPrice not between 50 and 100
+ order by UnitPrice
