@@ -129,3 +129,14 @@ order by UnitPrice desc
  select EmployeeID, LastName, HireDate 
  from Employees
  where City  in ('LONDON' , 'TACOMA')
+
+--*** ex 11
+ --select ProductID, ProductName, CategoryID
+ --from Products
+ --where not CategoryID in(1, 2, 7)
+ --order by Category
+
+--*** ex 12
+--select FirstName, Region 
+--from Employees
+--where Region is nu
