@@ -1,0 +1,3 @@
+--select UnitPrice, CEILING(unitprice) up, FLOOR(UnitPrice) down,
+--       ROUND(UnitPrice,0), ROUND(UnitPrice,1)
+--from Products
