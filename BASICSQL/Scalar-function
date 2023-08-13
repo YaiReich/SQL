@@ -46,3 +46,16 @@
 
 --*** ex 6 - הצג את התאריך של היום.
  select GETDATE()
+
+--*** ex 8 - הצג מתוך טבלת Employees את שמו הפרטי של העובד ואת גילו
+)ההפרש בשנים בין התאריך העכשווי ובין תאריך לידתו(
+
+select FirstName, DATEDIFF(yy,BirthDate,getdate()) as 'age' 
+from Employees
+
+--*** ex 9 - הצג מתוך טבלת Employees את שמו הפרטי של העובד,
+את היום בו התחיל לעבוד )לדוגמא ... monday ,sunday) , ואת השנה בה הוא
+התחיל לעבוד.
+
+select FirstName, datename(dw,HireDate) ,year(HireDate)
+from Employees
