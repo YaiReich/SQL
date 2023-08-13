@@ -124,3 +124,8 @@ order by UnitPrice desc
  from Products
  where UnitPrice not between 50 and 100
  order by UnitPrice
+
+--*** ex 8
+ select EmployeeID, LastName, HireDate 
+ from Employees
+ where City  in ('LONDON' , 'TACOMA')
