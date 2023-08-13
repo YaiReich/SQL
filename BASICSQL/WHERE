@@ -140,3 +140,16 @@ order by UnitPrice desc
 --select FirstName, Region 
 --from Employees
 --where Region is nu
+
+--*** ex 16
+יש להציג מטבלת categories את כל הפרטים של קטגוריות שיש להן את האות 'o'
+בשם.
+--select *
+--from Categories
+--where CategoryName like '%o
+
+--*** ex 17
+הצג מטבלת Customers את שם החברה ומדינתה , עבור החברות שהאות האחרונה בשמם היא 'a'.
+--select CompanyName, Country
+--from Customers
+--where CompanyName like '%
