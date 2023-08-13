@@ -154,6 +154,27 @@ order by UnitPrice desc
 --from Customers
 --where CompanyName like '%
 
+--*** ex 19
+select OrderID, CustomerID, EmployeeID
+from Orders
+where (OrderDate>='1997-04-01' and OrderDate<='1997-05-31')
+order by OrderDate asc, CustomerID desc 
+
+--*** ex 19 - opt2 between
+select OrderID, CustomerID, EmployeeID
+from Orders
+where OrderDate between '1997-04-01' and '1997-05-31'
+order by OrderDate asc, CustomerID desc 
+
+--*** ex 20
+יש להציג מטבלת Customers את מספר הלקוח, שם החברה, ארץ, טלפון ואזור עבור הלקוחות שנמצאים
+במדינות ששמן מתחיל ב F,M או G, והאזור שלהם הוא NULL.
+
+select CustomerID, CompanyName, Country, Phone, Region 
+from Customers
+where (Country like 'G%' or Country like 'f%' or Country like 'm%') 
+and Region is null
+
 --*** ex 21
 --select EmployeeID, FirstName+' '+LastName fullName,BirthDate, Country
 --from Employees
