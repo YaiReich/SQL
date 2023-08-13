@@ -154,6 +154,12 @@ order by UnitPrice desc
 --from Customers
 --where CompanyName like '%
 
+--*** ex 18 - הצג מטבלת Products את שם המוצר ומספר הקטגוריה שלו , עבור המוצרים שבשמם האות 'a 'היא אות
+אחת לפני הסוף.
+select ProductName, CategoryID
+from Products
+where ProductName like '%a_'
+
 --*** ex 19
 select OrderID, CustomerID, EmployeeID
 from Orders
