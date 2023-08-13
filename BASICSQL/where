@@ -101,3 +101,15 @@
 select top 2 *
 from Products
 order by UnitPrice desc
+
+
+--*** ex 1
+--select LastName, FirstName
+--from Employees
+--where EmployeeID = 3
+
+--*** ex 3
+--select ProductID as 'id', ProductName, UnitPrice 
+--from Products
+--where UnitPrice > 20
+--order by UnitPrice
