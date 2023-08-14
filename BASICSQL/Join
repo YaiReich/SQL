@@ -52,3 +52,8 @@ select e.FirstName empName, m.FirstName mgrName
 from Employees e join Employees m
 on e.ReportsTo=m.EmployeeID
 
+--*** ex 1
+הצג את שם המוצר מתוך טבלת products , ואת שם הקטגוריה שלו מתוך טבלת categories
+select pro.ProductName, cat.CategoryName
+from Products pro join Categories cat
+on pro.CategoryID=cat.CategoryID
