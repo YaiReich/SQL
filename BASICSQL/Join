@@ -86,3 +86,18 @@ join Suppliers sup
 on pro.SupplierID = sup.SupplierID
 where sup.City in ('tokyo', 'london')
 order by sup.City desc
+
+--*** ex 12 
+הצג מספר הזמנה )OrderID), תאריך הזמנה )OrderDate), וכתובת למשלוח
+,ORDERS מטבלת( ShipAddress(
+ובנוסף את קוד הלקוח )CustomerID), שם הלקוח )CompanyName )
+ומספר הטלפון שלו )Phone )מטבלת Customers.
+יש לכלול בתוצאה רק הזמנות שבוצעו בשנת ,1996
+ורק לקוחות שקוד הלקוח שלהם )CustomerID )מתחיל באותיות A או C
+
+select ord.OrderID, ord.OrderDate, ord.ShipAddress,
+       cus.CustomerID, cus.CompanyName, cus.Phone
+from Orders ord join Customers cus
+on cus.CustomerID = ord.CustomerID
+where YEAR(ord.OrderDate)=1996
+      and cus.CustomerID like '[ac]%'
