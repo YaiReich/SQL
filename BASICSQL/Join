@@ -66,3 +66,23 @@ select p.ProductName, p.UnitPrice, cat.CategoryName
 from Products p join Categories cat
 on p.CategoryID = cat.CategoryID
 where p.UnitPrice>50
+
+--*** ex 2
+הצג את שם המוצר מתוך טבלת products ואת שם החברה של הספק שלו מתוך טבלת suppliers
+select pro.ProductName, sup.CompanyName
+from Suppliers sup join Products pro
+on sup.SupplierID = pro.SupplierID
+
+--*** ex 9
+הצג את שם המוצר מתוך טבלת products ,
+את תיאור הקטגוריה מתוך טבלת categories( Description ),
+ואת עיר הספק מתוך טבלת suppliers ,
+כאשר שם העיר של הספק היא London או Tokyo
+
+select pro.ProductName, cat.Description, sup.City 
+from Products pro join Categories cat
+on pro.CategoryID = cat.CategoryID
+join Suppliers sup
+on pro.SupplierID = sup.SupplierID
+where sup.City in ('tokyo', 'london')
+order by sup.City desc
