@@ -1,0 +1,67 @@
+--select *
+--from students
+
+--select name,address
+--from students
+
+
+--select name as [first name],address ktovet
+--from students
+
+
+--select name+' lives in '+address fullData
+--from students
+
+--select *
+--from students
+--where id>3
+
+
+--select *
+--from students
+--where id between 2 and 6
+
+
+--select *
+--from students
+--where id in (1,2,4)
+
+
+--select *
+--from students
+--where id<>7 and name like '_a%'
+
+
+--select *
+--from students
+--where address is null
+
+
+--select *
+--from students
+--where not address is null
+
+
+--select top 3 *
+--from students
+
+
+--select *
+--from students
+--order by address desc,name asc
+
+
+--select name, left(name,2)
+--from students
+
+--select FirstName+' '+convert(nvarchar, HireDate ),
+--               DATEADD(mm,5,HireDate)
+--from Employees
+
+--select s.name, o.item
+--from students s inner join orders o
+--on s.id=o.sid
+
+select s.name, o.item
+from students s left outer join orders o
+on s.id=o.sid
