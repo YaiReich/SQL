@@ -4,10 +4,8 @@
 --select name,address
 --from students
 
-
 --select name as [first name],address ktovet
 --from students
-
 
 --select name+' lives in '+address fullData
 --from students
@@ -16,40 +14,32 @@
 --from students
 --where id>3
 
-
 --select *
 --from students
 --where id between 2 and 6
-
 
 --select *
 --from students
 --where id in (1,2,4)
 
-
 --select *
 --from students
 --where id<>7 and name like '_a%'
-
 
 --select *
 --from students
 --where address is null
 
-
 --select *
 --from students
 --where not address is null
 
-
 --select top 3 *
 --from students
-
 
 --select *
 --from students
 --order by address desc,name asc
-
 
 --select name, left(name,2)
 --from students
@@ -65,3 +55,23 @@
 select s.name, o.item
 from students s left outer join orders o
 on s.id=o.sid
+
+group functions
+--select COUNT(*),count(id),count(name),count(address)
+--   ,max(id),avg(id),sum(id)
+--from students
+
+--select count(*),address
+--from students
+--group by address
+
+--select count(*),address,name
+--from students
+--group by address, name
+
+select count(*),address
+from students
+where address like '%i%'
+group by address
+having count(*)<2
+order by address desc
