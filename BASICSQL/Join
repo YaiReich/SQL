@@ -101,3 +101,21 @@ from Orders ord join Customers cus
 on cus.CustomerID = ord.CustomerID
 where YEAR(ord.OrderDate)=1996
       and cus.CustomerID like '[ac]%'
+
+--*** ex 13 
+חזור על השאלה הקודמת,
+הוסף לה גם את עמודות שם פרטי )FirstName )ושם משפחה )LastName )
+מטבלת employees
+תן שמות מתאימים לעמודות.
+סדר את התוצאות עם תאריך ההזמנה בסדר יורד.
+
+select ord.OrderID, ord.OrderDate, ord.ShipAddress,
+       cus.CustomerID, cus.CompanyName, cus.Phone,
+	   emp.LastName+' '+emp.FirstName [Full name]
+from Orders ord join Customers cus
+on cus.CustomerID = ord.CustomerID
+join Employees emp
+on emp.EmployeeID = ord.EmployeeID
+where YEAR(ord.OrderDate)=1996
+      and cus.CustomerID like '[ac]%'
+order by ord.OrderDate desc
