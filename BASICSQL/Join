@@ -57,3 +57,12 @@ on e.ReportsTo=m.EmployeeID
 select pro.ProductName, cat.CategoryName
 from Products pro join Categories cat
 on pro.CategoryID=cat.CategoryID
+
+--*** ex 5
+הצג את שם המוצר ומחיר המוצר מתוך טבלת products ,
+ואת שם הקטגוריה שלו מתוך טבלת categories,
+עבור המוצרים שמחירם גבוה מ – 50
+select p.ProductName, p.UnitPrice, cat.CategoryName
+from Products p join Categories cat
+on p.CategoryID = cat.CategoryID
+where p.UnitPrice>50
