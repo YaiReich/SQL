@@ -1,0 +1,6 @@
+--insert into students (id,name,address) values(30,'a','b')
+--insert students values (40,'c','d')
+
+--update students set address='sham',name='gil' where id>11
+
+delete from students where id>20
