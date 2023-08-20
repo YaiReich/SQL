@@ -40,6 +40,22 @@
  from Employees
  where EmployeeID between 3 and 5
 
+--*** ex A2
+הצג מתוך טבלת Employees את שמו הפרטי של העובד , ובעמודה נוספת את מיקום האות 'a 'בתוך
+שמו
+
+select FirstName, CHARINDEX('a', FirstName)
+from Employees
+
+--*** ex B2
+בצע סינון לשאילתה והצג רק את העובדים אשר אין להם את האות 'a 'בשם 
+
+select FirstName, CHARINDEX('a', FirstName)
+from Employees
+where CHARINDEX('a', FirstName) = 0
+--where not FirstName like '%a%'
+
+
 --*** ex 5
  select ProductID, ProductName,replace(ProductName,'?','-')
  from Products
