@@ -109,6 +109,14 @@ select CategoryID,
 	   from Products
 group by CategoryID
 
+--*** ex 11
+הצג מטבלת Products את המחיר הגבוה ביותר של המוצר לפי כל מספר ספק, מיין לפי מספר הספק )סדר
+יורד(
+
+select SupplierID, max(UnitPrice) AS 'highest price'
+from Products
+group by SupplierID
+order by SupplierID desc
 
 --*** ex 15
 select COUNT(*), city
