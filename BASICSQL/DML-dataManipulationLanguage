@@ -14,12 +14,31 @@ delete from students where id>20
 
 --*** ex 5
 --insert my_employees values(1,'aviv cohen','clerk',10,4000)
+
 --*** ex 6
 --insert my_employees (id,name,title,deptid,salary) 
 --          values (2,'miriam levi','sales manager',20,3750)
+
 --*** ex 7
 --insert my_employees values(3,'alon romano','operation manager',
 --                             30,null)
+
 --*** ex 8
 --insert my_employees (id,name,deptid) 
 --          values (4,'baruch nave',30)
+
+--*** ex 9
+--insert my_employees values(5,'danny salomon'
+--          ,'sales representative',20,7000)
+
+--*** ex 11
+--update my_employees set salary=4500 where id=2
+
+--*** ex 12
+--update my_employees set name='simcha',deptid=20 where id=4
+
+--*** ex 14
+--update my_employees set deptid=10 where deptid=30
+
+--*** ex 15
+delete my_employees where name='alon romano'
