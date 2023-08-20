@@ -2,7 +2,7 @@
 --from Products
 --where UnitPrice> (select UnitPrice
 --                  from Products
---				  where ProductID=2)
+--		    where ProductID=2)
 
 SELECT ProductID,ProductName
 FROM products
@@ -15,23 +15,49 @@ WHERE ProductID IN(SELECT ProductID
 SELECT *
 from Products
 where UnitPrice > all (select UnitPrice
-						from Products
-						where CategoryID = 2)
+			from Products
+			where CategoryID = 2)
    =======================================
 select *
 from Products
 where UnitPrice > (select max(UnitPrice)
-                     from Products
-				     where CategoryID=2)
+                   from Products
+		   where CategoryID=2)
 
 select *
 from Products
 where UnitPrice >all (select UnitPrice
                      from Products
-				     where CategoryID=2)
+		    where CategoryID=2)
 =======================================
 select *
 from Products
 where UnitPrice > (select min(UnitPrice)
                      from Products
-				     where CategoryID=2)
+		     where CategoryID=2)
+
+select *
+from Products
+where UnitPrice >any (select UnitPrice
+                     from Products
+	             where CategoryID=2)
+
+
+--*** ex 1
+הצג מטבלת Products את שמות המוצרים אשר מחירם נמוך מהמחיר של מוצר מספר .
+
+SELECT ProductName
+from Products
+where UnitPrice < (select UnitPrice
+		   from Products
+		   where ProductID = 8)
+
+--*** ex 5
+הצג מטבלת Products את שמות המוצרים וכמותם במלאי, עבור המוצרים אשר כמותם במלאי נמוכה יותר
+מהכמות המינימלית בקטגוריה מספר 5
+
+SELECT ProductName, UnitsInStock
+from Products
+where UnitsInStock < (select min(UnitsInStock)
+			  	   from Products
+				   where CategoryID = 5)
