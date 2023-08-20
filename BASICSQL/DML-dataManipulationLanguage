@@ -4,3 +4,22 @@
 --update students set address='sham',name='gil' where id>11
 
 delete from students where id>20
+
+--CREATE TABLE my_employees (
+--id INt PRIMARY KEY ,
+--name VARCHAR (50),
+--title VARCHAR(50),
+--deptid INT,
+--salary MONEY DEFAULT 3500)
+
+--*** ex 5
+--insert my_employees values(1,'aviv cohen','clerk',10,4000)
+--*** ex 6
+--insert my_employees (id,name,title,deptid,salary) 
+--          values (2,'miriam levi','sales manager',20,3750)
+--*** ex 7
+--insert my_employees values(3,'alon romano','operation manager',
+--                             30,null)
+--*** ex 8
+--insert my_employees (id,name,deptid) 
+--          values (4,'baruch nave',30)
