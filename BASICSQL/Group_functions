@@ -118,6 +118,30 @@ from Products
 group by SupplierID
 order by SupplierID desc
 
+--*** ex 12
+הצג מטבלת Products את ממוצע היחידות במלאי לפי כל מספר ספק מיין לפי ממוצע היחידות )סדר יורד(
+
+select SupplierID, AVG(UnitsInStock)
+from Products
+group by SupplierID
+order by avg(UnitsInStock) desc
+
+--*** ex 13
+ הצג מטבלת Customers את מספר הלקוחות לפי המדינה , ולפי העיר 
+select COUNT(CompanyName), Country, City
+from Customers
+group by Country, City
+
+--*** ex 14
+הצג מטבלת Products את המחיר הממוצע של המוצרים לפי כל קטגוריה , עבור המוצרים שהמחיר שלהם
+גדול מ 40
+
+select CategoryID,
+       avg(UnitPrice) 'Avg Price'
+from Products
+where UnitPrice > 40
+group by CategoryID
+
 --*** ex 15
 select COUNT(*), city
 from Customers
