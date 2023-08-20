@@ -85,6 +85,31 @@ select convert(nvarchar,min(BirthDate) ,113) [Min Birth-date],
        convert(nvarchar, max(BirthDate) ,113) [Max Birth-date]
 from Employees
 
+--*** ex 8
+הצג את מספר הלקוחות השונים הקיימים בטבלת Customers, תן שם מתאים לעמודה
+
+select COUNT(CustomerID) 'Number of customers' 
+from Customers
+
+--*** ex 9
+הצג את מספר הלקוחות השונים הקיימים בטבלת Orders, תן שם מתאים לעמודה. שים לב, הפעם יתכן
+שלקוח מסויים ביצע יותר מהזמנה אחת
+
+select COUNT(distinct CustomerID) [Number of customers]
+from Orders
+
+--*** ex 10
+הצג מטבלת Products את המחיר )UnitPrice )המקסימאלי, המינימאלי, והממוצע למוצר עבור כל קטגוריה
+) CategoryID). תן שמות מתאימים לעמודות.
+
+select CategoryID,
+       max(UnitPrice) 'Max Price',
+       min(UnitPrice) 'Min Price',
+	   avg(UnitPrice) 'Avg Price'
+	   from Products
+group by CategoryID
+
+
 --*** ex 15
 select COUNT(*), city
 from Customers
