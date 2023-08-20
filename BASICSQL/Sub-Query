@@ -62,7 +62,7 @@ where UnitsInStock < (select min(UnitsInStock)
 			  	   from Products
 				   where CategoryID = 5)
 
---*** ex 8
+--*** ex 8 - opt1
 הצג מטבלת Products את שם המוצר ומחירו, עבור המוצרים אשר מחירם גבוה מלפחות אחד המוצרים
 בקטגוריה מספר 5
 
@@ -71,6 +71,13 @@ where UnitsInStock < (select min(UnitsInStock)
 --where UnitPrice > any (select UnitPrice
 --			  from Products
 --			  where CategoryID = 5)
+
+--*** ex 8 - opt2
+select ProductName, UnitPrice
+from Products
+where UnitPrice > (select min(UnitPrice)
+                   from Products
+		   where CategoryID=5)
 
 
 --*** ex 12
@@ -87,6 +94,8 @@ and SupplierID in (select SupplierID
 					where Region is NUll)
 
 --*** ex 13
+הצג את שמות החברות )CompanyName מטבלת Suppliers )המספקות מוצרים
+ מקטגוריית Beverages( עמודת CategoryName בטבלת Categories)
 
 select CompanyName
 from Suppliers
