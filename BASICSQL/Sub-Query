@@ -1,0 +1,5 @@
+--select ProductName, UnitPrice
+--from Products
+--where UnitPrice> (select UnitPrice
+--                  from Products
+--				  where ProductID=2)
