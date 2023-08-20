@@ -55,6 +55,24 @@ from Employees
 where CHARINDEX('a', FirstName) = 0
 --where not FirstName like '%a%'
 
+--*** ex 3
+ הצג מתוך טבלת Categories את שם הקטגוריה , את תיאור הקטגוריה
+ ואת מיקום התו 'i 'בתוך תיאור הקטגוריה 4 ספרות מתחילת המילה
+
+select CategoryName,
+       Description,
+       charindex('i', Description, 4)
+from Categories
+
+--*** ex 4
+הצג מתוך טבלת Employees את שמו הפרטי של העובד, שם משפחתו ושם משתמש.
+ שם המשתמש יורכב מ 3 אותיות ראשונות של שמו הפרטי יחד )שרשור( עם
+ האות הראשונה של שם משפחתו 
+
+select FirstName, LastName, 
+       SUBSTRING(FirstName,1,3)+' '+SUBSTRING(LastName,1,1) as [User name]
+from Employees
+
 
 --*** ex 5
  select ProductID, ProductName,replace(ProductName,'?','-')
@@ -88,6 +106,17 @@ SELECT CONCAT(ProductID, ' AND ', SupplierID) AS Product,
 Floor(UnitPrice*1.165) as ['Full price']
 FROM Products
 where Floor(UnitPrice*1.165) > 40
+
+--*** ex 15
+הצג מטבלת employees את העמודות הבאות:
+שם המשפחה,
+שם המשפחה מהסוף להתחלה )תן כינוי מתאים לעמודה(.
+הצג את הנתונים רק עבור העובדים אשר יש להם מנהל )על פי עמודת ReportsTo).
+
+select LastName, REVERSE(LastName) as [reverse last name]
+from Employees
+where ReportsTo is not null
+
 
 --*** ex 17
 SELECT LEFT(CompanyName, 4) AS FirstFourLetters
