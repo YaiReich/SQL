@@ -81,9 +81,9 @@ order by address desc
 הצג מטבלת Employees את תאריך יום ההולדת הנמוך ביותר ותאריך יום ההולדת הגבוה ביותר. יש להציג
 את התאריכים בפורמט 113 תן שמות מתאימים לעמודות.
 
---select min(convert(nvarchar,BirthDate  ,113)) minDOB,
---     max(convert(nvarchar, BirthDate,113)) maxDOB
---from Employees
+select convert(nvarchar,min(BirthDate) ,113) [Min Birth-date],
+       convert(nvarchar, max(BirthDate) ,113) [Max Birth-date]
+from Employees
 
 --*** ex 15
 select COUNT(*), city
