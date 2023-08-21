@@ -1,0 +1,8 @@
+DECLARE
+@var varchar(20),
+@var2 varchar(20)
+
+select @var = FirstName, @var2 = LastName from Employees
+where EmployeeID = 2
+
+print 'mr.' + ' ' + @var + ' ' + @var2
