@@ -1,0 +1,11 @@
+-- TSQL - Transact SQL
+use Northwind
+
+DECLARE
+@var int
+
+set @var = 10
+print @var
+select @var
+
+create database temp_db
