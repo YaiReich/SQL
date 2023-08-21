@@ -4,3 +4,13 @@ declare @str nvarchar(250)
 set @str = 'select * from Employees'
 
 exec sp_executesql @str
+
+===================================
+
+-- Dynamic SQL
+
+declare @str nvarchar(250),
+        @emp_id int = 3
+set @str = 'select * from Employees where EmployeeID =' + CAST(@emp_id as nvarchar(2))
+
+exec sp_executesql @str
