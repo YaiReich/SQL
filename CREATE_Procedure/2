@@ -1,8 +1,11 @@
 DECLARE
 @var varchar(20),
 @var2 varchar(20)
+@Employee_ID int 
+
+set @Employee_ID = 2 
 
 select @var = FirstName, @var2 = LastName from Employees
-where EmployeeID = 2
+where EmployeeID = @Employee_ID
 
-print 'mr.' + ' ' + @var + ' ' + @var2
+print 'mr./ms.' + ' ' + @var + ' ' + @var2
