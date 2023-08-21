@@ -1,0 +1,6 @@
+-- Dynamic SQL
+
+declare @str nvarchar(250)
+set @str = 'select * from Employees'
+
+exec sp_executesql @str
