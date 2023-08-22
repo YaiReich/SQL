@@ -8,3 +8,5 @@ AS
    from Employees
    where EmployeeID = @Emp_id
  END
+
+ exec sp_GetAge 2
