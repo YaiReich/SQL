@@ -1,3 +1,5 @@
+פרוצדורה שמחזירה את המוצרים שהמחיר שלהם גדול ממשתנה שנשלח
+
 go
 create Procedure sp_GetByUnitPrice
 @Price money
