@@ -1,0 +1,10 @@
+go
+create Procedure sp_GetByUnitPrice
+@Price money
+AS
+ BEGIN
+	select * from Products
+	where UnitPrice > @Price
+END
+
+exec sp_GetByUnitPrice 80
