@@ -2,15 +2,15 @@ go
 CREATE Procedure sp_GetByTableName
 @TableName nvarchar(100), @ColumnName varchar(250)
 AS
-      BEGIN
-	       DECLARE @SQL nvarchar(MAX)
+   BEGIN
+	DECLARE @SQL nvarchar(MAX)
 
-		   SET @SQL = 'Select ' + QUOTENAME(@ColumnName) + 'from ' + QUOTENAME(@TableName)
+	SET @SQL = 'Select ' + QUOTENAME(@ColumnName) + 'from ' + QUOTENAME(@TableName)
 
-		   exec sp_executesql @sql
-	  END
+	exec sp_executesql @sql
+   END
 
-	  exec sp_GetByTableName 'Employees', 'FirstNAme'
+   exec sp_GetByTableName 'Employees', 'FirstNAme'
 
 -------------------------------------------------------------------------
 go
