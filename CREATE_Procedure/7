@@ -6,7 +6,22 @@ create Procedure sp_GetByUnitPrice
 AS
  BEGIN
 	select * from Products
-	where UnitPrice > @Price
+	where UnitPrice >= @Price
 END
 
 exec sp_GetByUnitPrice 80
+
+----------------------------------------------------------------
+go
+ALTER Procedure sp_GetByUnitPrice
+AS
+ BEGIN
+ DECLAre @Price money
+
+	select @Price = avg(UnitPrice) from Products
+
+	select * from Products
+	where UnitPrice >= @Price
+END
+
+exec sp_GetByUnitPrice
