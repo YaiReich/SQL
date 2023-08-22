@@ -141,6 +141,14 @@ order by UnitPrice desc
 --from Employees
 --where Region is nu
 
+--*** ex 14
+יש להציג מטבלת Orders את מספרי ההזמנות, תאריך ההזמנה ותאריך הדרישה עבור כל ההזמנות
+שתאריך הדרישה שלהם אחרי חודש אוקטובר .1996
+
+select OrderID, OrderDate, RequiredDate
+from Orders
+where OrderDate > '1996-10-31'
+
 --*** ex 16
 יש להציג מטבלת categories את כל הפרטים של קטגוריות שיש להן את האות 'o'
 בשם.
