@@ -32,3 +32,20 @@ AS
 select OrderID
 from Orders
 where OrderID=10248
+
+-------------------------------------------------------------------------
+
+go
+ALTER Procedure sp_GetByTableName
+@TableName nvarchar(100), @ColumnName varchar(250), @Where varchar(256)
+AS
+   BEGIN
+      DECLARE @SQL nvarchar(MAX)
+
+      SET @SQL = 'Select * from ' + QUOTENAME(@TableName)+
+      'Where ' + QUOTENAME(@ColumnName)+ '=' + (@where)
+
+      exec sp_executesql @sql
+   END
+
+   exec sp_GetByTableName 'orders', 'orderid', '10248'
