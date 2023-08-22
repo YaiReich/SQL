@@ -1,0 +1,10 @@
+פרוצדורה שמחזירה את גיל החייב לאחר קבלת מספר תעודת זהות
+
+create Procedure sp_GetAge
+@Emp_id int
+AS
+ BEGIN
+   select FirstName, LastName, DATEDIFF(yy,BirthDate,getdate()) as 'age'
+   from Employees
+   where EmployeeID = @Emp_id
+ END
