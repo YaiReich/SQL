@@ -8,3 +8,6 @@ AS
    BEGIN
 
    END
+
+דרך הקריאה לפונקציה:
+select dbo.fn_GetAge(2)
