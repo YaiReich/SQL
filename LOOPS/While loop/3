@@ -1,0 +1,10 @@
+ DECLARE
+ @num int = 1
+
+ while @num < 10
+	BEGIN
+	   print dbo.fn_GetAge(@num)
+		 set @num = @num + 1
+	END
+
+ שימוש של לולאה שקוראית לפונקציה, מעבירה לה פרמטר, מקבלת תשובה ומדפיסה
