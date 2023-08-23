@@ -1,0 +1,8 @@
+CREATE VIEW v_GetOrders
+	AS
+	(
+	SELECT O.OrderID, O.OrderDate, OD.UnitPrice, OD.Quantity, OD.Discount
+	FROM [Order Details] OD
+	JOIN Orders O
+	ON O.OrderID = OD.OrderID
+	WHERE YEAR(O.OrderDate) = 1996)
