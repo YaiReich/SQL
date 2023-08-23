@@ -5,3 +5,5 @@
     RETURN SELECT FirstName, LastName, DATEDIFF(YY, BirthDate, GETDATE()) AS AGE
 	FROM Employees
 	WHERE EmployeeID = @EMP_id
+
+SELECT * FROM DBO.FN_GETEMPDETAILS(3)
