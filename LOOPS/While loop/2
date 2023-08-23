@@ -1,0 +1,8 @@
+DECLARE
+ @num int = 1
+
+ while @num < 10
+	BEGIN
+	    print @num
+		set @num = @num + 1
+	END
