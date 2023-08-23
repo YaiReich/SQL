@@ -1,0 +1,13 @@
+alter Procedure sp_GetNamefromEmployee
+@Emp_id int
+AS
+	BEGIN
+	  begin try
+			select 10/@Emp_id
+	  end try
+	  begin catch
+	      print 'my error'
+	  end catch
+	END
+
+	exec sp_GetNamefromEmployee 0
