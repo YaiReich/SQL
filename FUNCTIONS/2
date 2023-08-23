@@ -15,8 +15,8 @@
    --------------------------------
 
 create FUNCTION fn_GetSumTotal
-(@Order_year money)
-Returns int
+(@Order_year int)
+Returns money
 AS
    BEGIN
       return (select sum(UnitPrice * Quantity * (1-Discount)) as SumTotal
