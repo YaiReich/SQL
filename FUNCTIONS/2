@@ -11,3 +11,19 @@
    join Orders o
    on o.OrderID = od.OrderID
    where year(o.OrderDate) = 1996
+
+   --------------------------------
+
+create FUNCTION fn_GetSumTotal
+(@Order_year money)
+Returns int
+AS
+   BEGIN
+      return (select sum(UnitPrice * Quantity * (1-Discount)) as SumTotal
+              from [Order Details] od
+              join Orders o
+              on o.OrderID = od.OrderID
+              where year(o.OrderDate) = @Order_year)
+   END
+
+   select dbo.fn_GetSumTotal(1996)
