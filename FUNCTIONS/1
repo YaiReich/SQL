@@ -1,4 +1,5 @@
-פונקציה בניגוד ל-SP  צריכה להחזיר ערך אחד
+SCALAR FUNCTIONS  פונקציות שמחזירות ערך אחד
+בניגוד ל- SP שיכול להחזיר כמה ערכים
 
 create FUNCTION fn_GetAge
 (@Emp_id int)
