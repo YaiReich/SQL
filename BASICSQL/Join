@@ -73,6 +73,19 @@ select pro.ProductName, sup.CompanyName
 from Suppliers sup join Products pro
 on sup.SupplierID = pro.SupplierID
 
+--*** ex 8
+הצג את שם המוצר מתוך טבלת products ,
+את שם הקטגוריה מתוך טבלת categories,
+ואת שם החברה של הספק מתוך טבלת suppliers
+
+select pro.ProductName, cat.Description, sup.CompanyName
+from Products pro
+     join Categories cat
+on pro.CategoryId=cat.CategoryID
+     join Suppliers sup
+on sup.SupplierID = pro.SupplierID
+
+
 --*** ex 9
 הצג את שם המוצר מתוך טבלת products ,
 את תיאור הקטגוריה מתוך טבלת categories( Description ),
