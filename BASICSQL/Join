@@ -73,6 +73,18 @@ select pro.ProductName, sup.CompanyName
 from Suppliers sup join Products pro
 on sup.SupplierID = pro.SupplierID
 
+--*** ex 7
+הצג את מספר המוצר , מחיר המוצר, ומספר הספק מתוך טבלת products
+ואת שם הקטגוריה שלו מתוך טבלת categories,
+עבור המוצרים שיש להם בשם הקטגוריה את האות a
+
+select pro.ProductID, pro.UnitPrice, pro.SupplierID, cat.CategoryName 
+from Products pro
+     join Categories cat
+on pro.CategoryID = cat.CategoryID	
+where cat.CategoryName like '%a%'
+
+
 --*** ex 8
 הצג את שם המוצר מתוך טבלת products ,
 את שם הקטגוריה מתוך טבלת categories,
