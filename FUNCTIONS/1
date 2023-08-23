@@ -1,1 +1,9 @@
-פונקציה בניגוד ל-SP צריכה להחזיר ערך
+פונקציה בניגוד ל-SP  צריכה להחזיר ערך אחד
+
+create FUNCTION fn_GetAge
+(@Emp_id int)
+Returns int
+AS
+   BEGIN
+
+   END
