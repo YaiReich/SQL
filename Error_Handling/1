@@ -2,11 +2,8 @@ CREATE Procedure sp_GetNamefromEmployee
 @Emp_id int
 AS
 	BEGIN
-		DECLARE
-			@var1 varchar(20),
-			@var2 nvarchar(20)
-			
-			select @var1 = FirstName , @var2 = LastName from Employees
-			where EmployeeID = @Emp_id
-			print 'mr.' + @var1 + ' ' + @var2
+	   select 10/@Emp_id
+
 	END
+
+exec sp_GetNamefromEmployee 0
