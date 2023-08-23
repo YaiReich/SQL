@@ -1,0 +1,9 @@
+   select UnitPrice * Quantity * (1-Discount) as price, o.OrderDate
+   from [Order Details] od
+   join Orders o
+   on o.OrderID = od.OrderID
+   where year(o.OrderDate) = 1996
+
+   --------------------------------
+
+   
