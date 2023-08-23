@@ -7,3 +7,8 @@
 	WHERE EmployeeID = @EMP_id
 
 SELECT * FROM DBO.FN_GETEMPDETAILS(3)
+
+
+SELECT E.*, M.Country FROM
+	DBO.FN_GETEMPDETAILS(3) E JOIN Employees M
+	ON E.FirstName = M.FirstName
