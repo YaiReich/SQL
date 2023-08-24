@@ -141,6 +141,14 @@ order by UnitPrice desc
 --from Employees
 --where Region is nu
 
+--*** ex 13
+ יש להציג מטבלת products את שמות המוצרים ומחירם עבור שלושת המוצרים היקרים ביותר.
+
+select top 3 ProductName, UnitPrice
+from Products
+order by UnitPrice desc
+
+
 --*** ex 14
 יש להציג מטבלת Orders את מספרי ההזמנות, תאריך ההזמנה ותאריך הדרישה עבור כל ההזמנות
 שתאריך הדרישה שלהם אחרי חודש אוקטובר .1996
