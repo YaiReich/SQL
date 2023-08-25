@@ -58,6 +58,22 @@ select pro.ProductName, cat.CategoryName
 from Products pro join Categories cat
 on pro.CategoryID=cat.CategoryID
 
+--*** ex 2
+הצג את שם המוצר מתוך טבלת products ואת שם החברה של הספק שלו מתוך טבלת suppliers
+select pro.ProductName, sup.CompanyName
+from Suppliers sup join Products pro
+on sup.SupplierID = pro.SupplierID
+
+--*** ex 3
+הצג את מספר ההזמנה מתוך טבלת orders ואת שם החברה של הלקוח
+מתוך טבלת customers , עבור החברות ששמן מתחיל באות 'a'
+
+select ord.OrderID, cus.CompanyName
+from Orders ord join Customers cus
+on ord.CustomerID = cus.CustomerID
+where cus.CompanyName like 'a%'
+
+
 --*** ex 5
 הצג את שם המוצר ומחיר המוצר מתוך טבלת products ,
 ואת שם הקטגוריה שלו מתוך טבלת categories,
@@ -67,11 +83,6 @@ from Products p join Categories cat
 on p.CategoryID = cat.CategoryID
 where p.UnitPrice>50
 
---*** ex 2
-הצג את שם המוצר מתוך טבלת products ואת שם החברה של הספק שלו מתוך טבלת suppliers
-select pro.ProductName, sup.CompanyName
-from Suppliers sup join Products pro
-on sup.SupplierID = pro.SupplierID
 
 --*** ex 7
 הצג את מספר המוצר , מחיר המוצר, ומספר הספק מתוך טבלת products
