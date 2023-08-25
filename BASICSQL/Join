@@ -157,6 +157,21 @@ where YEAR(ord.OrderDate)=1996
 order by ord.OrderDate desc
 
 
+--** ex 14 a
+הצג את שם משפחתו של העובד ושם משפחתו של מנהלו, בסס את תשובתך
+על סמך הקשר הפנימי בתוך טבלת Employees בין מספר המנהל
+ומספר העובד
+
+select emp.LastName as 'employee', mng.LastName as 'manager'
+from Employees emp join Employees mng
+on emp.ReportsTo = mng.EmployeeID
+
+--** ex 14 B -  הצג גם את העובדים ללא המנהלים.
+select emp.LastName as 'employee', mng.LastName as 'manager'
+from Employees emp left outer join Employees mng
+on emp.ReportsTo = mng.EmployeeID
+
+
 --** ex 15
 הצג מטבלת המוצרים, בעזרת join, את מספר המוצר (ProductID(, שם המוצר (ProductName(, ומחירו
 (UnitPrice (עבור מוצרים שעולים יותר ממוצר בשם Mutton Alice.
