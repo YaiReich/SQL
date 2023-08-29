@@ -52,6 +52,17 @@ where UnitPrice < (select UnitPrice
 		   from Products
 		   where ProductID = 8)
 
+--*** ex 2
+הצג מטבלת Products את שמות המוצרים ומחירם, עבור המוצרים אשר מחירם גבוה יותר ממוצר ששמו
+Tofu
+
+SELECT ProductName, UnitPrice
+FROM Products
+where UnitPrice > (select UnitPrice
+		  from Products
+		  where ProductName = 'tofu')
+
+
 --*** ex 5
 הצג מטבלת Products את שמות המוצרים וכמותם במלאי, עבור המוצרים אשר כמותם במלאי נמוכה יותר
 מהכמות המינימלית בקטגוריה מספר 5
