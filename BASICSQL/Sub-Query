@@ -95,6 +95,19 @@ where UnitsInStock < (select min(UnitsInStock)
 				   where CategoryID = 5)
 
 ---------------------------------------------------------------------------
+--*** ex 6
+
+הצג מטבלת Products את כל פרטי המוצרים שנמצאים באותה קטגוריה כמו מוצר ששמו Chai. אין להציג
+בתוצאה הסופית את המוצר chai עצמו
+
+select *
+from Products
+where CategoryID = (select CategoryID
+		    from Products
+		    where ProductName = 'chai')
+And ProductName <> 'chai'
+
+---------------------------------------------------------------------------
 --*** ex 8 - opt1
 הצג מטבלת Products את שם המוצר ומחירו, עבור המוצרים אשר מחירם גבוה מלפחות אחד המוצרים
 בקטגוריה מספר 5
