@@ -62,6 +62,15 @@ where UnitPrice > (select UnitPrice
 		  from Products
 		  where ProductName = 'tofu')
 
+--*** ex 3
+הצג מטבלת employees את שמות העובדים ותאריך גיוסם עבור העובדים שגויסו לאחר עובד שמספרו .6
+
+SELECT LastName +' '+FirstName as FullName, HireDate
+FROM Employees
+where HireDate > (select HireDate
+                  from Employees
+	  	  where EmployeeID = 6)
+
 
 --*** ex 5
 הצג מטבלת Products את שמות המוצרים וכמותם במלאי, עבור המוצרים אשר כמותם במלאי נמוכה יותר
