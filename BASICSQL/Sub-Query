@@ -42,7 +42,7 @@ where UnitPrice >any (select UnitPrice
                      from Products
 	             where CategoryID=2)
 
-
+---------------------------------------------------------------------------
 --*** ex 1
 הצג מטבלת Products את שמות המוצרים אשר מחירם נמוך מהמחיר של מוצר מספר .
 
@@ -51,6 +51,7 @@ from Products
 where UnitPrice < (select UnitPrice
 		   from Products
 		   where ProductID = 8)
+---------------------------------------------------------------------------
 
 --*** ex 2
 הצג מטבלת Products את שמות המוצרים ומחירם, עבור המוצרים אשר מחירם גבוה יותר ממוצר ששמו
@@ -61,6 +62,7 @@ FROM Products
 where UnitPrice > (select UnitPrice
 		  from Products
 		  where ProductName = 'tofu')
+---------------------------------------------------------------------------
 
 --*** ex 3
 הצג מטבלת employees את שמות העובדים ותאריך גיוסם עבור העובדים שגויסו לאחר עובד שמספרו .6
@@ -71,6 +73,16 @@ where HireDate > (select HireDate
                   from Employees
 	  	  where EmployeeID = 6)
 
+---------------------------------------------------------------------------
+--*** ex 4
+הצג מטבלת Products את מספר המוצר, שם המוצר ומחיר יחידה עבור המוצרים אשר מחירם גבוה
+מהמחיר הממוצע ליחידה.
+
+select ProductID, ProductName, UnitPrice
+from Products
+where UnitPrice > (select avg(UnitPrice)
+		   from Products)
+---------------------------------------------------------------------------
 
 --*** ex 5
 הצג מטבלת Products את שמות המוצרים וכמותם במלאי, עבור המוצרים אשר כמותם במלאי נמוכה יותר
@@ -82,6 +94,7 @@ where UnitsInStock < (select min(UnitsInStock)
 			  	   from Products
 				   where CategoryID = 5)
 
+---------------------------------------------------------------------------
 --*** ex 8 - opt1
 הצג מטבלת Products את שם המוצר ומחירו, עבור המוצרים אשר מחירם גבוה מלפחות אחד המוצרים
 בקטגוריה מספר 5
@@ -100,6 +113,7 @@ where UnitPrice > (select min(UnitPrice)
 		   where CategoryID=5)
 
 
+---------------------------------------------------------------------------
 --*** ex 12
 הצג מטבלת products את שמות כל המוצרים אשר שם הקטגוריה שלהם הוא Beverages או
 Condiments וגם אזור )region )הספק אינו ידוע.
@@ -113,6 +127,7 @@ and SupplierID in (select SupplierID
 				    from Suppliers
 					where Region is NUll)
 
+---------------------------------------------------------------------------
 --*** ex 13
 הצג את שמות החברות )CompanyName מטבלת Suppliers )המספקות מוצרים
  מקטגוריית Beverages( עמודת CategoryName בטבלת Categories)
