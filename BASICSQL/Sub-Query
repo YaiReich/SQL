@@ -11,7 +11,6 @@ WHERE ProductID IN(SELECT ProductID
                    GROUP BY ProductID
                    HAVING sum(Quantity )>1200)
 
-
 SELECT *
 from Products
 where UnitPrice > all (select UnitPrice
