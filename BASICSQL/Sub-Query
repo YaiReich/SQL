@@ -107,6 +107,18 @@ where CategoryID = (select CategoryID
 And ProductName <> 'chai'
 
 ---------------------------------------------------------------------------
+
+--*** ex 7
+הצג מטבלת Products את שם המוצר, מחירו ומספר הקטגוריה שלו, עבור המוצרים שמחירם שווה לאלו
+של קטגוריה מס' 5
+
+select ProductName, UnitPrice, CategoryID
+from Products
+where UnitPrice in (select UnitPrice
+		    from Products
+		    where CategoryID = 5)
+
+---------------------------------------------------------------------------
 --*** ex 8 - opt1
 הצג מטבלת Products את שם המוצר ומחירו, עבור המוצרים אשר מחירם גבוה מלפחות אחד המוצרים
 בקטגוריה מספר 5
