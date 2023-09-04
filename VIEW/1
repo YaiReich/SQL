@@ -8,7 +8,6 @@ CREATE VIEW v_GetOrders
 	WHERE YEAR(O.OrderDate) = 1996)
 
 SELECT * FROM v_GetOrders
-
 ----------------------------------------------
 ב-VIEW
 אין פרמטרים שהוא מקבל ו/או מחזיר - משפט אסקיואל שמחזיר תוצאה
