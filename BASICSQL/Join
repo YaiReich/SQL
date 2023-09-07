@@ -51,18 +51,21 @@
 select e.FirstName empName, m.FirstName mgrName
 from Employees e join Employees m
 on e.ReportsTo=m.EmployeeID
+---------------------------------------------------------------------
 
 --*** ex 1
 הצג את שם המוצר מתוך טבלת products , ואת שם הקטגוריה שלו מתוך טבלת categories
 select pro.ProductName, cat.CategoryName
 from Products pro join Categories cat
 on pro.CategoryID=cat.CategoryID
+---------------------------------------------------------------------
 
 --*** ex 2
 הצג את שם המוצר מתוך טבלת products ואת שם החברה של הספק שלו מתוך טבלת suppliers
 select pro.ProductName, sup.CompanyName
 from Suppliers sup join Products pro
 on sup.SupplierID = pro.SupplierID
+---------------------------------------------------------------------
 
 --*** ex 3
 הצג את מספר ההזמנה מתוך טבלת orders ואת שם החברה של הלקוח
@@ -72,7 +75,7 @@ select ord.OrderID, cus.CompanyName
 from Orders ord join Customers cus
 on ord.CustomerID = cus.CustomerID
 where cus.CompanyName like 'a%'
-
+---------------------------------------------------------------------
 
 --*** ex 5
 הצג את שם המוצר ומחיר המוצר מתוך טבלת products ,
@@ -83,7 +86,7 @@ from Products p join Categories cat
 on p.CategoryID = cat.CategoryID
 where p.UnitPrice>50
 
-
+---------------------------------------------------------------------
 --*** ex 7
 הצג את מספר המוצר , מחיר המוצר, ומספר הספק מתוך טבלת products
 ואת שם הקטגוריה שלו מתוך טבלת categories,
@@ -95,7 +98,7 @@ from Products pro
 on pro.CategoryID = cat.CategoryID	
 where cat.CategoryName like '%a%'
 
-
+---------------------------------------------------------------------
 --*** ex 8
 הצג את שם המוצר מתוך טבלת products ,
 את שם הקטגוריה מתוך טבלת categories,
@@ -108,7 +111,7 @@ on pro.CategoryId=cat.CategoryID
      join Suppliers sup
 on sup.SupplierID = pro.SupplierID
 
-
+---------------------------------------------------------------------
 --*** ex 9
 הצג את שם המוצר מתוך טבלת products ,
 את תיאור הקטגוריה מתוך טבלת categories( Description ),
@@ -122,6 +125,7 @@ join Suppliers sup
 on pro.SupplierID = sup.SupplierID
 where sup.City in ('tokyo', 'london')
 order by sup.City desc
+---------------------------------------------------------------------
 
 --*** ex 12 
 הצג מספר הזמנה )OrderID), תאריך הזמנה )OrderDate), וכתובת למשלוח
@@ -137,6 +141,7 @@ from Orders ord join Customers cus
 on cus.CustomerID = ord.CustomerID
 where YEAR(ord.OrderDate)=1996
       and cus.CustomerID like '[ac]%'
+---------------------------------------------------------------------
 
 --*** ex 13 
 חזור על השאלה הקודמת,
@@ -156,7 +161,7 @@ where YEAR(ord.OrderDate)=1996
       and cus.CustomerID like '[ac]%'
 order by ord.OrderDate desc
 
-
+---------------------------------------------------------------------
 --** ex 14 a
 הצג את שם משפחתו של העובד ושם משפחתו של מנהלו, בסס את תשובתך
 על סמך הקשר הפנימי בתוך טבלת Employees בין מספר המנהל
@@ -166,12 +171,13 @@ select emp.LastName as 'employee', mng.LastName as 'manager'
 from Employees emp join Employees mng
 on emp.ReportsTo = mng.EmployeeID
 
+---------------------------------------------------------------------
 --** ex 14 B -  הצג גם את העובדים ללא המנהלים.
 select emp.LastName as 'employee', mng.LastName as 'manager'
 from Employees emp left outer join Employees mng
 on emp.ReportsTo = mng.EmployeeID
 
-
+---------------------------------------------------------------------
 --** ex 15
 הצג מטבלת המוצרים, בעזרת join, את מספר המוצר (ProductID(, שם המוצר (ProductName(, ומחירו
 (UnitPrice (עבור מוצרים שעולים יותר ממוצר בשם Mutton Alice.
