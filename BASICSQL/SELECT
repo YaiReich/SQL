@@ -23,6 +23,7 @@ from students
 
 --select FirstName, HireDate, Region, Country
 --from Employees
+-------------------------------------------------------------------------------------------
 
 --*** ex 6
  הצג מטבלת Employees את העמודות הבאות : Address( אליאס - Add ), City( אליאס - Ct ), Region
@@ -30,6 +31,7 @@ from students
 
 --select Address as [add], City ct, Region as reg
 --from Employees
+-------------------------------------------------------------------------------------------
 
 --*** ex 7
 הצג מטבלת customers שתי עמודות: קוד הלקוח בעמודה אחת, הכתובת והעיר משורשרות יחדיו בעמודה
@@ -37,6 +39,7 @@ from students
 
 --select CustomerID, Address +' '+ City [full addres]
 --from Custome
+-------------------------------------------------------------------------------------------
 
 --*** ex 8
 הצג מטבלת Employees שלוש עמודות:
