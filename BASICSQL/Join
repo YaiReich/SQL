@@ -186,6 +186,7 @@ select p1.ProductID, p1.ProductName, p1.UnitPrice
 from Products p1 join Products p2
 on p1.UnitPrice>p2.UnitPrice
 where p2.ProductName='alice mutton'
+---------------------------------------------------------------------
 
 -פתרון בשימוש עם תת שאילתא
 select ProductID, ProductName, UnitPrice
