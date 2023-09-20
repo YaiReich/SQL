@@ -11,7 +11,7 @@
    join Orders o
    on o.OrderID = od.OrderID
    where year(o.OrderDate) = 1996
-   --------------------------------
+------------------------------------------------------------------------------
 
 create FUNCTION fn_GetSumTotal
 (@Order_year int)
