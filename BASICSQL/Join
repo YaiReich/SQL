@@ -141,6 +141,7 @@ from Orders ord join Customers cus
 on cus.CustomerID = ord.CustomerID
 where YEAR(ord.OrderDate)=1996
       and cus.CustomerID like '[ac]%'
+
 ---------------------------------------------------------------------
 
 --*** ex 13 
@@ -160,8 +161,9 @@ on emp.EmployeeID = ord.EmployeeID
 where YEAR(ord.OrderDate)=1996
       and cus.CustomerID like '[ac]%'
 order by ord.OrderDate desc
-
 ---------------------------------------------------------------------
+
+
 --** ex 14 a
 הצג את שם משפחתו של העובד ושם משפחתו של מנהלו, בסס את תשובתך
 על סמך הקשר הפנימי בתוך טבלת Employees בין מספר המנהל
