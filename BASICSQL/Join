@@ -2,18 +2,22 @@
 --from students, orders
 --where id=sid
 ---------------------------------------------------------------------
+
 --select s.name,o.item
 --from students s, orders o
 --where s.id=o.sid
 ---------------------------------------------------------------------
+
 --select p.ProductName, c.CategoryName
 --from Products p, Categories c
 --where p.CategoryID=c.CategoryID
 ---------------------------------------------------------------------
+
 --select p.ProductName, c.CategoryName
 --from Products p join Categories c
 --on p.CategoryID=c.CategoryID
 ---------------------------------------------------------------------
+
 --select p.ProductName, c.CategoryName, s.CompanyName
 --from Products p join Categories c
 --on p.CategoryID=c.CategoryID
@@ -21,33 +25,41 @@
 --on p.SupplierID=s.SupplierID
 --where p.ProductName like '%a%'
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s inner join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s left join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s right join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s right outer join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s full outer join orders o
 --on s.id=o.sid
 ---------------------------------------------------------------------
+
 --select s.name, o.item
 --from students s cross join orders o
 ---------------------------------------------------------------------
+
 select e.FirstName empName, m.FirstName mgrName
 from Employees e join Employees m
 on e.ReportsTo=m.EmployeeID
