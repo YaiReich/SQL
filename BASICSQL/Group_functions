@@ -47,27 +47,33 @@
 --select FirstName+' '+convert(nvarchar, HireDate ),
 --               DATEADD(mm,5,HireDate)
 --from Employees
+--------------------------------------------------------------------------------
 
 --select s.name, o.item
 --from students s inner join orders o
 --on s.id=o.sid
+--------------------------------------------------------------------------------
 
 select s.name, o.item
 from students s left outer join orders o
 on s.id=o.sid
+--------------------------------------------------------------------------------
 
 group functions
 --select COUNT(*),count(id),count(name),count(address)
 --   ,max(id),avg(id),sum(id)
 --from students
+--------------------------------------------------------------------------------
 
 --select count(*),address
 --from students
 --group by address
+--------------------------------------------------------------------------------
 
 --select count(*),address,name
 --from students
 --group by address, name
+--------------------------------------------------------------------------------
 
 select count(*),address
 from students
