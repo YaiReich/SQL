@@ -14,18 +14,21 @@
 --from students
 --where id in(1,2,5)
 
-
+-------------------------------------------------------
 --select *
 --from students
 --where not id between 2 and 4
+-------------------------------------------------------
 
 --select *
 --from students
 --where not id in(1,2,5)
+-------------------------------------------------------
 
 --select *
 --from students
 --where address like '%a'
+-------------------------------------------------------
 
 --select *
 --from students
